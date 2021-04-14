@@ -11,7 +11,7 @@ public class SelectionSort {
 		int temp = 0;
 		for(int row = 0; row < x.length; row++) {
 			for(int col = 0; col < x.length; col++) {
-				if(x[row] > x[col]) {
+				if(x[row] < x[col]) {
 					temp = x[row];
 					x[row] = x[col];
 					x[col] = temp; 
