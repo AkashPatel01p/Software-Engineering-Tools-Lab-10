@@ -1,0 +1,49 @@
+package sorting;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+
+public class TestSelectionSort {
+
+	
+	
+	@Test 
+	public void testPostives() {
+		SelectionSort sorting = new SelectionSort(); 
+		int[] expected = {2, 7, 8, 9, 10};
+		int[] input = {8, 9, 7, 10, 2}; 
+		sorting.selectionSort(input); 
+		Assert.assertArrayEquals(input, expected);
+	}
+	
+	@Test 
+	public void testNegatives() {
+		SelectionSort sorting = new SelectionSort();
+		int[] expected = {-4, -3, -2, -1};
+		int[] input = {-4, -3, -2, -1};
+		sorting.selectionSort(input);
+		Assert.assertArrayEquals(expected, input);
+	}
+	
+	@Test 
+	public void testMixed() {
+		SelectionSort sorting = new SelectionSort();
+		int[] expected = {-2, -1, 0, 1, 2};
+		int[] input = {-2, 0, -1, 2, 1};
+		sorting.selectionSort(input);
+		Assert.assertArrayEquals(expected, input);
+	}
+	
+	@Test 
+	public void testDuplicates() {
+		SelectionSort sorting = new SelectionSort();
+		int[] expected = {0, 0, 0, 0};
+		int[] input = {0, 0, 0, 0};
+		sorting.selectionSort(input);
+		Assert.assertArrayEquals(expected, input);
+	}
+	
+
+}
