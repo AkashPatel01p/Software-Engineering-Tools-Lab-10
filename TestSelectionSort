@@ -19,6 +19,14 @@ public class TestSelectionSort {
 	}
 	
 	@Test 
+	public void testNegatives() {
+		SelectionSort sorting = new SelectionSort();
+		int[] expected = {-4, -3, -2, -1};
+		int[] input = {-4, -3, -2, -1};
+    sorting.selectionSort(input);
+		Assert.assertArrayEquals(expected, input);
+   }
+    
 	public void testMixed() {
 		SelectionSort sorting = new SelectionSort();
 		int[] expected = {-2, -1, 0, 1, 2};
@@ -27,6 +35,7 @@ public class TestSelectionSort {
 		Assert.assertArrayEquals(expected, input);
 	}
 	
+
 	public void testDuplicates() {
 		SelectionSort sorting = new SelectionSort();
 		int[] expected = {0, 0, 0, 0};
@@ -34,5 +43,6 @@ public class TestSelectionSort {
 		sorting.selectionSort(input);
 		Assert.assertArrayEquals(expected, input);
 	}
+
 
 }
