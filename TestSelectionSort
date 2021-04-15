@@ -18,5 +18,14 @@ public class TestSelectionSort {
 		Assert.assertArrayEquals(input, expected);
 	}
 	
+	@Test 
+	public void testNegatives() {
+		SelectionSort sorting = new SelectionSort();
+		int[] expected = {-4, -3, -2, -1};
+		int[] input = {-4, -3, -2, -1};
+		sorting.selectionSort(input);
+		Assert.assertArrayEquals(expected, input);
+	}
+	
 
 }
