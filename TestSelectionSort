@@ -18,5 +18,16 @@ public class TestSelectionSort {
 		Assert.assertArrayEquals(input, expected);
 	}
 	
+	@Test 
+	public void testMixed() {
+		SelectionSort sorting = new SelectionSort();
+		int[] expected = {-2, -1, 0, 1, 2};
+		int[] input = {-2, 0, -1, 2, 1};
+		sorting.selectionSort(input);
+		Assert.assertArrayEquals(expected, input);
+	}
+	
+
+	
 
 }
