@@ -18,32 +18,5 @@ public class TestSelectionSort {
 		Assert.assertArrayEquals(input, expected);
 	}
 	
-	@Test 
-	public void testNegatives() {
-		SelectionSort sorting = new SelectionSort();
-		int[] expected = {-4, -3, -2, -1};
-		int[] input = {-4, -3, -2, -1};
-		sorting.selectionSort(input);
-		Assert.assertArrayEquals(expected, input);
-	}
-	
-	@Test 
-	public void testMixed() {
-		SelectionSort sorting = new SelectionSort();
-		int[] expected = {-2, -1, 0, 1, 2};
-		int[] input = {-2, 0, -1, 2, 1};
-		sorting.selectionSort(input);
-		Assert.assertArrayEquals(expected, input);
-	}
-	
-	@Test 
-	public void testDuplicates() {
-		SelectionSort sorting = new SelectionSort();
-		int[] expected = {0, 0, 0, 0};
-		int[] input = {0, 0, 0, 0};
-		sorting.selectionSort(input);
-		Assert.assertArrayEquals(expected, input);
-	}
-	
 
 }
